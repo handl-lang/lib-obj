@@ -6,7 +6,7 @@
 
 [[repos]]
 name = "handl-lang/lib-obj"
-dir = "/home/luis/GitHub/handl-lang/lib-obj"
+dir = "~//GitHub/handl-lang/lib-obj"
 branch = "refs/heads/main"
   [repos.runner]
   kind = "script"
