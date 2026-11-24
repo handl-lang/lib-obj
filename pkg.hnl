@@ -1,0 +1,12 @@
+-- lib-obj: the `obj` module — record introspection primitives
+-- (keys/values/entries over Handl objects). Transitional layout: the
+-- interface is `src/index.hnl` (cap/op declarations); implementations
+-- are native `op` atoms.
+{
+  modules: ["obj"],
+  name: "obj",
+  description: "Record introspection primitives — obj.keys, obj.values, obj.entries over Handl objects.",
+  license: "MIT",
+  keywords: ["obj", "record", "introspection", "stdlib", "handl"],
+  homepage: "https://github.com/handl-lang/lib-obj",
+}
