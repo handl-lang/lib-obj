@@ -8,9 +8,9 @@ cap "obj.keys"
 cap "obj.values"
 cap "obj.entries"
 
-op "obj.keys" : Object -> Array
+op "obj.keys" : Object ~> Array
   guarantee: IsArray(output)
-op "obj.values" : Object -> Array
+op "obj.values" : Object ~> Array
   guarantee: IsArray(output)
-op "obj.entries" : Object -> Array
+op "obj.entries" : Object ~> Array
   guarantee: IsArray(output)
