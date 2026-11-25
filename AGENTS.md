@@ -13,7 +13,7 @@ embedding it.
 | `atoms.yaml` | atom declarations |
 | `Cargo.toml`, `xtask/` | crate manifest + `cargo xtask` gate |
 | `pkg.hnl` | package manifest — `modules: ["obj"]` |
-| `scripts/hnl-gate.sh`, `ci.sh` | the hnl gate / bupha entry |
+| `scripts/hnl-gate.sh`, `workflows/gate.yaml` | the hnl gate / bupha entry |
 
 ## Contract
 
