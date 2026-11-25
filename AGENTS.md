@@ -8,17 +8,18 @@ embedding it.
 
 | path | role |
 | --- | --- |
-| `src/index.hnl` | the interface — cap/op declarations |
-| `src/lib.rs`, `src/ops.rs` | the Rust crate (native `op` atoms) |
-| `atoms.yaml` | atom declarations |
+| `src/index.hnl` | the interface — documentation surface; atom spec in `atoms.yaml` (P-013/T-151) |
+| `src/lib.rs`, `src/ops.rs` | the Rust crate — `Op` impls + `obj_op_registry()` |
+| `atoms.yaml` | atom spec |
 | `Cargo.toml`, `xtask/` | crate manifest + `cargo xtask` gate |
 | `pkg.hnl` | package manifest — `modules: ["obj"]` |
 | `scripts/hnl-gate.sh`, `workflows/gate.yaml` | the hnl gate / bupha entry |
 
 ## Contract
 
-- Transitional layout: interface is `src/index.hnl`; implementations
-  are native `op` atoms in the crate.
+- Spec-driven layout: `atoms.yaml` is the spec; the `Op` impls live
+  in this crate (`src/ops.rs`) and resolve via the host's
+  `obj_impls()` table (`plugin-lib-stdlib` `ops/kernel_impls.rs`).
 
 ## Verification
 
