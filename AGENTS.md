@@ -1,3 +1,36 @@
+# lib-obj
+
+`obj` — record introspection primitives (`keys`/`values`/`entries`
+over Handl objects): the `.hnl` interface plus the Rust crate
+embedding it.
+
+## Layout
+
+| path | role |
+| --- | --- |
+| `src/index.hnl` | the interface — cap/op declarations |
+| `src/lib.rs`, `src/ops.rs` | the Rust crate (native `op` atoms) |
+| `atoms.yaml` | atom declarations |
+| `Cargo.toml`, `xtask/` | crate manifest + `cargo xtask` gate |
+| `pkg.hnl` | package manifest — `modules: ["obj"]` |
+| `scripts/hnl-gate.sh`, `ci.sh` | the hnl gate / bupha entry |
+
+## Contract
+
+- Transitional layout: interface is `src/index.hnl`; implementations
+  are native `op` atoms in the crate.
+
+## Verification
+
+```bash
+cargo xtask gate        # fmt --check → clippy -D warnings → test → doc
+HNL=../host-cli/target/debug/hnl scripts/hnl-gate.sh   # the .hnl side
+```
+
+## License
+
+MIT.
+
 <!-- myco:agent-awareness -->
 
 ## Agent awareness
