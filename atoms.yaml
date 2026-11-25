@@ -1,0 +1,19 @@
+# lib-obj atom spec (P-013/T-151) — record introspection atoms.
+# The IDL: name = dispatch key, sig = handl signature (~> canonical),
+# impl = key into the kernel impl table (ops::kernel_impls::obj_impls).
+# Replaces the cap/op decl pairs in src/index.hnl (T-151).
+module: obj
+atoms:
+  - name: obj.keys
+    sig: "Object ~> Array"
+    impl: obj_keys
+  - name: obj.values
+    sig: "Object ~> Array"
+    impl: obj_values
+  - name: obj.entries
+    sig: "Object ~> Array"
+    impl: obj_entries
+  - name: obj.set
+    impl: obj_set
+  - name: obj.from_entries
+    impl: obj_from_entries
