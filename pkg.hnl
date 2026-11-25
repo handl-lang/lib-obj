@@ -2,6 +2,7 @@
 -- (keys/values/entries over Handl objects). Transitional layout: the
 -- interface is `src/index.hnl` (cap/op declarations); implementations
 -- are native `op` atoms.
+-- test_coverage "none": doc-only surface — obj.* impls are native atoms (atoms.yaml).
 {
   modules: ["obj"],
   name: "obj",
@@ -9,4 +10,5 @@
   license: "MIT",
   keywords: ["obj", "record", "introspection", "stdlib", "handl"],
   homepage: "https://github.com/handl-lang/lib-obj",
+  test_coverage: "none",
 }
